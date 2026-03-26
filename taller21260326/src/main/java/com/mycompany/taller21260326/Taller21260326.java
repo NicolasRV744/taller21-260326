@@ -17,13 +17,24 @@ class ListaEnlazada {
 
     public void insertar(int valor) {
         Nodo nuevo = new Nodo(valor);
-        Nodo actual = cabeza;
-
-        while (actual != null) {
+        if (cabeza == null) {
+        cabeza = nuevo;
+        } else {
+           Nodo actual = cabeza;
+            while (actual.siguiente != null) {
             actual = actual.siguiente;
         }
 
-        actual = nuevo; // ❌ ERROR: no enlaza nada
+        actual.siguiente = nuevo;
     }
-}
+ }
+ public long sumar() {
+        long suma = 0;
+        Nodo actual = cabeza;
+        while (actual.siguiente != null) { 
+        suma += actual.valor;
+        actual = actual.siguiente;
+    }
 
+    return suma;
+}
