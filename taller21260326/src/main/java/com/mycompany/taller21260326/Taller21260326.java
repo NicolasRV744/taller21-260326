@@ -1,3 +1,5 @@
+package com.mycompany.taller21260326;
+
 import java.util.Scanner;
 
 class Nodo {
@@ -6,12 +8,22 @@ class Nodo {
 
     public Nodo(int valor) {
         this.valor = valor;
+        this.siguiente = null;
     }
 }
 
-public class Taller21260326 {
+class ListaEnlazada {
+    Nodo cabeza;
 
-    public static void main(String[] args) {
-        
+    public void insertar(int valor) {
+        Nodo nuevo = new Nodo(valor);
+        Nodo actual = cabeza;
+
+        while (actual != null) {
+            actual = actual.siguiente;
+        }
+
+        actual = nuevo; // ❌ ERROR: no enlaza nada
     }
 }
+
