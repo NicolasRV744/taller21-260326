@@ -31,10 +31,11 @@ class ListaEnlazada {
  public long sumar() {
         long suma = 0;
         Nodo actual = cabeza;
-        while (actual.siguiente != null) { 
+        while (actual != null) {
         suma += actual.valor;
         actual = actual.siguiente;
     }
 
     return suma;
+ }
 }
