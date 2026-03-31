@@ -46,8 +46,9 @@ public class MissingNumberLista {
 
         ListaEnlazada lista = new ListaEnlazada();
         for (int i = 0; i < n - 1; i++) {
-    lista.insertar(sc.nextInt());
-}
+        int numero = sc.nextInt();
+        lista.insertar(numero);
+        }
         long sumaTotal = (long) n * (n + 1) / 2;
         long sumaLista = lista.sumar();
 
