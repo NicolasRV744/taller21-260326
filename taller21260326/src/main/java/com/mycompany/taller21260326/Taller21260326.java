@@ -48,4 +48,11 @@ public class MissingNumberLista {
         for (int i = 0; i < n - 1; i++) {
     lista.insertar(sc.nextInt());
 }
-    
+        long sumaTotal = (long) n * (n + 1) / 2;
+        long sumaLista = lista.sumar();
+
+        long faltante = sumaTotal - sumaLista;
+
+        System.out.println(faltante);
+    }
+}
