@@ -42,10 +42,21 @@ class ListaEnlazada {
 class MissingNumberLista {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
+         System.out.println(" BUSCAR NUMERO FALTANTE ");
+         System.out.print("Ingrese el valor de n: ");
+        
+        
         int n = sc.nextInt();
 
         ListaEnlazada lista = new ListaEnlazada();
+        
+         System.out.println("Ingrese " + (n - 1) + " numeros entre 1 y " + n + ":");
+        
         for (int i = 0; i < n - 1; i++) {
+            
+        System.out.print("Numero " + (i + 1) + ": ");
+        
         int numero = sc.nextInt();
         lista.insertar(numero);
         }
@@ -54,6 +65,6 @@ class MissingNumberLista {
 
         long faltante = sumaTotal - sumaLista;
 
-        System.out.println(faltante);
+        System.out.println("\nEl numero faltante es: " + faltante);
     }
 }
